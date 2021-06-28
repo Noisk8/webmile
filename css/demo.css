@@ -53,9 +53,9 @@ img {
 }
 
 input {
-    border: 1px solid #b0b0b0;
+    border: 1px solid #e40f0f;
     padding: 3px 5px 4px;
-    color: #979797;
+    color: #ce1616;
     width: 190px;
 }
 
@@ -108,7 +108,7 @@ acronym {
 
 body {
     font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
-    background: #fbf8f4 url(../images/bg2.jpg);
+    background: url(../images/bg2.jpg);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -125,7 +125,7 @@ body {
 }
 
 a {
-    color: #333;
+    color: rgb(168, 5, 5);
     text-decoration: none;
 }
 
@@ -143,7 +143,7 @@ a {
     margin: 0px 20px 10px 20px;
     position: relative;
     display: block;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px rgba(230, 24, 24, 0.2);
     text-align: center;
 }
 
@@ -159,8 +159,8 @@ a {
 }
 
 .container>header h1 span {
-    color: #ecf5f8;
-    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8);
+    color: #c30606;
+    text-shadow: 0px 1px 1px rgba(104, 4, 4, 0.8);
 }
 
 .container>header h2,
@@ -172,12 +172,12 @@ p.info {
 }
 
 .container>header h2 a {
-    color: #936a46;
+    color: #fa1313;
     text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8);
 }
 
 .container>header h2 a:hover {
-    color: #614429;
+    color: #e60000;
 }
 
 
@@ -201,13 +201,13 @@ p.info {
 .codrops-top a {
     padding: 0px 10px;
     letter-spacing: 1px;
-    color: #ddd;
+    color: rgb(255, 1, 1);
     display: block;
     float: left;
 }
 
 .codrops-top a:hover {
-    color: #fff;
+    color: rgb(255, 10, 10);
 }
 
 .codrops-top span.right {
@@ -229,8 +229,8 @@ p.codrops-demos a,
 p.codrops-demos a.current-demo,
 p.codrops-demos a.current-demo:hover {
     display: inline-block;
-    border: 1px solid #ddd;
-    border-color: #ddd #aaa #aaa #ddd;
+    border: 1px solid rgb(230, 24, 24);
+    border-color: rgb(207, 20, 20) #aaa #aaa #ddd;
     padding: 4px 10px 3px;
     font-size: 13px;
     line-height: 18px;
