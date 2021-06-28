@@ -53,9 +53,9 @@ img {
 }
 
 input {
-    border: 1px solid #e40f0f;
+    border: 1px solid #b0b0b0;
     padding: 3px 5px 4px;
-    color: #ce1616;
+    color: #979797;
     width: 190px;
 }
 
@@ -80,19 +80,6 @@ th {
     text-align: left;
 }
 
-
-/*
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-size: 100%;
-    font-weight: normal;
-}
-*/
-
 q:before,
 q:after {
     content: '';
@@ -108,14 +95,10 @@ acronym {
 
 body {
     font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
-    background: url(../images/bg2.jpg);
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: #fbf8f4 url(../images/bg2.jpg) repeat top left;
     font-weight: 400;
     font-size: 15px;
-    color: #e23b3b;
+    color: #936a46;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -125,7 +108,7 @@ body {
 }
 
 a {
-    color: rgb(168, 5, 5);
+    color: #333;
     text-decoration: none;
 }
 
@@ -143,7 +126,7 @@ a {
     margin: 0px 20px 10px 20px;
     position: relative;
     display: block;
-    text-shadow: 1px 1px 1px rgba(230, 24, 24, 0.2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
@@ -153,14 +136,14 @@ a {
     line-height: 35px;
     position: relative;
     font-weight: 400;
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(27, 54, 81, 0.8);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     padding: 0px 0px 5px 0px;
 }
 
 .container>header h1 span {
-    color: #c30606;
-    text-shadow: 0px 1px 1px rgba(104, 4, 4, 0.8);
+    color: #008dc1;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8);
 }
 
 .container>header h2,
@@ -172,12 +155,12 @@ p.info {
 }
 
 .container>header h2 a {
-    color: #fa1313;
+    color: #936a46;
     text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8);
 }
 
 .container>header h2 a:hover {
-    color: #e60000;
+    color: #614429;
 }
 
 
@@ -201,13 +184,13 @@ p.info {
 .codrops-top a {
     padding: 0px 10px;
     letter-spacing: 1px;
-    color: rgb(255, 1, 1);
+    color: #ddd;
     display: block;
     float: left;
 }
 
 .codrops-top a:hover {
-    color: rgb(255, 10, 10);
+    color: #fff;
 }
 
 .codrops-top span.right {
@@ -229,8 +212,8 @@ p.codrops-demos a,
 p.codrops-demos a.current-demo,
 p.codrops-demos a.current-demo:hover {
     display: inline-block;
-    border: 1px solid rgb(230, 24, 24);
-    border-color: rgb(207, 20, 20) #aaa #aaa #ddd;
+    border: 1px solid #ddd;
+    border-color: #ddd #aaa #aaa #ddd;
     padding: 4px 10px 3px;
     font-size: 13px;
     line-height: 18px;
@@ -274,7 +257,7 @@ p.codrops-demos a:active {
 p.codrops-demos a.current-demo,
 p.codrops-demos a.current-demo:hover {
     color: #fff;
-    background: #50dd2c;
+    background: #008dc1;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -318,7 +301,7 @@ p.codrops-demos a.current-demo:hover {
 .column {
     float: left;
     width: 50%;
-    padding: 10px;
+    padding: 180px;
     height: 300px;
     /* Should be removed. Only for demonstration */
 }
