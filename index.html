@@ -1,255 +1,114 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!-->
-<html class="no-js" lang="en">
-
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Proyecto Milena Contreras</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Thumbnail Proximity Effect with jQuery and CSS3" />
-    <meta name="keywords" content="thumbnails, jquery, proximity, effect, css3, scale, mouse, hover" />
-    <meta name="author" content="Codrops" />
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/demo.css" />
-    <link rel="stylesheet" type="text/css" href="css/style2.css" />
+    <title>Web Mile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        .container {
+            position: relative;
+            width: 50%;
+        }
+        
+        .image {
+            display: block;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 220px;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #5f5a0f;
+        }
+        
+        .container:hover .overlay {
+            opacity: 1;
+        }
+        
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
 </head>
 
-<body id="page">
-    <div class="container">
-        <!-- Codrops top bar 
-        <div class="codrops-top">
-            <a href="http://tympanus.net/Tutorials/CSS3FullscreenSlideshow/">
-                <strong>&laquo; Previous Demo: </strong>Fullscreen Background Image Slideshow with CSS3
+<body>
+
+    <header>
+
+
+        <div>
+            <a href="index.html">
+                <h1>Milena Contreras</h1>
             </a>
-            <span class="right">
-					<a href="http://www.behance.net/neo_innov" target="_blank">Illustrations by Florian NICOLLE</a>
-					<a href="http://creativecommons.org/licenses/by-nc/3.0/" target="_blank">CC BY-NC 3.0</a>
-                    <a href="http://tympanus.net/codrops/2012/01/04/thumbnail-proximity-effect/">
-                        <strong>Back to the Codrops Article</strong>
-                    </a>
-                </span>
-            <div class="clr"></div>
+            <h3>Proyecto de platohedro | Ministerio de cultura de Colombia</h3>
         </div>
-        / Codrops top bar -->
-        <header>
-            <h1>Mile <span>Naria</span>Project</h1>
-            <h2>Proyecto
-                <a href=""></a> by <a href="">Milena Contreras</a></h2>
-            <p class="codrops-demos">
-                <a href="descripcion.html">Descripción</a>
-                <a href="bio.html">Bio</a>
-            </p>
-        </header>
-        <section class="pe-container">
-            <ul id="pe-thumbs" class="pe-thumbs">
-                <li>
-                    <a href="etapa1.html"><img src="images/thumbs/1.jpg" />
-                        <div class="pe-description">
-                            <h3>Etapa 1</h3>
-                            <p>Proceso 1</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/thumbs/2.jpg" />
-                        <div class="pe-description">
-                            <h3>Etapa 2</h3>
-                            <p>proceso parte 2</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/thumbs/3.jpg" />
-                        <div class="pe-description">
-                            <h3>Etapa 3</h3>
-                            <p>Proceso parte 3</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/thumbs/4.jpg" />
-                        <div class="pe-description">
-                            <h3>Etapa 4</h3>
-                            <p>Proceso parte 4</p>
-                        </div>
-                    </a>
-                </li>
+    </header>
 
 
-            </ul>
-        </section>
+    <div class="menu">
+
+        <ul>
+            <li> <a href="descripcion.html"> Descripción</a></li>
+            <li> <a href="bio.html"> Bio</a></li>
+
+        </ul>
+
     </div>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.proximity.js"></script>
-    <script type="text/javascript">
-        $(function() {
 
-            var Photo = (function() {
+    <center>
+        <div class="box">
 
-                // list of thumbs
-                var $list = $('#pe-thumbs'),
-                    // list's width and offset left.
-                    // this will be used to know the position of the description container
-                    listW = $list.width(),
-                    listL = $list.offset().left,
-                    // the images
-                    $elems = $list.find('img'),
-                    // the description containers
-                    $descrp = $list.find('div.pe-description'),
-                    // maxScale : maximum scale value the image will have
-                    // minOpacity / maxOpacity : minimum (set in the CSS) and maximum values for the image's opacity
-                    settings = {
-                        maxScale: 1.3,
-                        maxOpacity: 0.9,
-                        minOpacity: Number($elems.css('opacity'))
-                    },
-                    init = function() {
+            <div class="container">
+                <img src="img/mile1.jpg" alt="etapa1" class="image" width="220">
 
-                        // minScale will be set in the CSS
-                        settings.minScale = _getScaleVal() || 1;
-                        // preload the images (thumbs)
-                        _loadImages(function() {
+                <div class=" overlay ">
+                    <a href="etapa1.html" target="_blank">
+                        <div class="text">Etapa 1</div>
+                    </a>
+                </div>
+            </div>
+            <div class="container">
+                <img src="img/mile2.jpg" alt="tapa1" class="image" width="220">
+                <div class="overlay">
+                    <a href="etapa2.html" target="_blank">
+                        <div class="text">Etapa 2</div>
+                    </a>
+                </div>
+            </div>
+            <div class="container">
+                <img src="img/mile1.jpg" alt="tapa1" class="image" width="220">
+                <div class="overlay">
+                    <a href="etapa3.html" target="_blank">
+                        <div class="text">Etapa 3</div>
+                    </a>
+                </div>
+            </div>
+            <div class="container">
+                <img src="img/mile2.jpg" alt="tapa1" class="image" width="220">
+                <div class="overlay">
+                    <a href="etapa4.html" target="_blank">
+                        <div class="text">Etapa 4</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </center>
 
-                            _calcDescrp();
-                            _initEvents();
 
-                        });
 
-                    },
-                    // Get Value of CSS Scale through JavaScript:
-                    // http://css-tricks.com/get-value-of-css-rotation-through-javascript/
-                    _getScaleVal = function() {
 
-                        var st = window.getComputedStyle($elems.get(0), null),
-                            tr = st.getPropertyValue("-webkit-transform") ||
-                            st.getPropertyValue("-moz-transform") ||
-                            st.getPropertyValue("-ms-transform") ||
-                            st.getPropertyValue("-o-transform") ||
-                            st.getPropertyValue("transform") ||
-                            "fail...";
-
-                        if (tr !== 'none') {
-
-                            var values = tr.split('(')[1].split(')')[0].split(','),
-                                a = values[0],
-                                b = values[1],
-                                c = values[2],
-                                d = values[3];
-
-                            return Math.sqrt(a * a + b * b);
-
-                        }
-
-                    },
-                    // calculates the style values for the description containers,
-                    // based on the settings variable
-                    _calcDescrp = function() {
-
-                        $descrp.each(function(i) {
-
-                            var $el = $(this),
-                                $img = $el.prev(),
-                                img_w = $img.width(),
-                                img_h = $img.height(),
-                                img_n_w = settings.maxScale * img_w,
-                                img_n_h = settings.maxScale * img_h,
-                                space_t = (img_n_h - img_h) / 2,
-                                space_l = (img_n_w - img_w) / 2;
-
-                            $el.data('space_l', space_l).css({
-                                height: settings.maxScale * $el.height(),
-                                top: -space_t,
-                                left: img_n_w - space_l
-                            });
-
-                        });
-
-                    },
-                    _initEvents = function() {
-
-                        $elems.on('proximity.Photo', {
-                            max: 80,
-                            throttle: 10,
-                            fireOutOfBounds: true
-                        }, function(event, proximity, distance) {
-
-                            var $el = $(this),
-                                $li = $el.closest('li'),
-                                $desc = $el.next(),
-                                scaleVal = proximity * (settings.maxScale - settings.minScale) + settings.minScale,
-                                scaleExp = 'scale(' + scaleVal + ')';
-
-                            // change the z-index of the element once it reaches the maximum scale value
-                            // also, show the description container
-                            if (scaleVal === settings.maxScale) {
-
-                                $li.css('z-index', 1000);
-
-                                if ($desc.offset().left + $desc.width() > listL + listW) {
-
-                                    $desc.css('left', -$desc.width() - $desc.data('space_l'));
-
-                                }
-
-                                $desc.fadeIn(800);
-
-                            } else {
-
-                                $li.css('z-index', 1);
-
-                                $desc.stop(true, true).hide();
-
-                            }
-
-                            $el.css({
-                                '-webkit-transform': scaleExp,
-                                '-moz-transform': scaleExp,
-                                '-o-transform': scaleExp,
-                                '-ms-transform': scaleExp,
-                                'transform': scaleExp,
-                                'opacity': (proximity * (settings.maxOpacity - settings.minOpacity) + settings.minOpacity)
-                            });
-
-                        });
-
-                    },
-                    _loadImages = function(callback) {
-
-                        var loaded = 0,
-                            total = $elems.length;
-
-                        $elems.each(function(i) {
-
-                            var $el = $(this);
-
-                            $('<img/>').load(function() {
-
-                                ++loaded;
-                                if (loaded === total)
-                                    callback.call();
-
-                            }).attr('src', $el.attr('src'));
-
-                        });
-
-                    };
-
-                return {
-                    init: init
-                };
-
-            })();
-
-            Photo.init();
-
-        });
-    </script>
 </body>
-
-</html>
