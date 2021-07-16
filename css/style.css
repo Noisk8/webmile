@@ -1,5 +1,5 @@
 body {
-    background-image: url(../img/bg2.jpg);
+    background-image: url(../img/fondo.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -37,7 +37,16 @@ header {
 h1 {
     text-align: center;
     color: brown;
+    font-size: 40px;
 }
+
+h2 {
+    text-align: center;
+    color: brown;
+    font-size: 25px;
+}
+
+
 
 img {
     padding-right: 15px;
@@ -80,4 +89,23 @@ img {
 .menu {
     margin: auto;
     width: 250px;
+}
+
+.foot {
+    padding-top: 80px;
+}
+
+#footer {
+    width:900px;
+    padding-top: -50px;
+    margin: auto;
+    margin-right: 400px;
+}
+
+#textodescripcion {
+    font-size: 15px;
+    margin: auto;
+    width: 900px;
+    list-style:square;
+
 }
