@@ -1,30 +1,40 @@
 body {
-    background-image: url(../img/fondo.png);
+    /* Ubicación de la imagen */
+    background-image: url(../img/bg2.jpg);
+    /* Para dejar la imagen de fondo centrada, vertical y
+
+horizontalmente */
+    background-position: center center;
+    /* Para que la imagen de fondo no se repita */
     background-repeat: no-repeat;
-    background-position: center;
+    /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+    background-attachment: fixed;
+    /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
     background-size: cover;
-    font-family: monospace;
+    /* Se muestra un color de fondo mientras se está cargando la imagen
+
+de fondo o si hay problemas para cargarla */
+    background-color: #66999;
 }
 
+
+}
 .box {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
     width: 900px;
 }
-
 ul li {
     list-style-type: none;
     display: inline;
     font-size: 18px;
     color: cornsilk;
 }
-
 a {
     color: antiquewhite;
     text-decoration: none;
 }
-
 header {
     margin: 10px auto;
     width: 60%;
@@ -33,32 +43,24 @@ header {
     justify-content: center;
     margin-top: 20px;
 }
-
 h1 {
     text-align: center;
     color: brown;
     font-size: 40px;
 }
-
 h2 {
     text-align: center;
     color: brown;
     font-size: 25px;
 }
-
-
-
 img {
     padding-right: 15px;
 }
-
 * {
     box-sizing: border-box;
 }
 
-
 /* Create two equal columns that floats next to each other */
-
 .column {
     float: left;
     width: 50%;
@@ -67,45 +69,36 @@ img {
     /* Should be removed. Only for demonstration */
 }
 
-
 /* Clear floats after the columns */
-
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
-
 .imgetapa {
     border-style: double;
     color: brown;
 }
-
 .cajatexto {
     margin: auto;
     width: 800px;
 }
-
 .menu {
     margin: auto;
     width: 250px;
 }
-
 .foot {
     padding-top: 80px;
 }
-
 #footer {
-    width:900px;
+    width: 900px;
     padding-top: -50px;
     margin: auto;
     margin-right: 400px;
 }
-
 #textodescripcion {
     font-size: 15px;
     margin: auto;
     width: 900px;
-    list-style:square;
-
+    list-style: square;
 }
