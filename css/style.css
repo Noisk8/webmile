@@ -81,9 +81,13 @@ img {
     clear: both;
 }
 
-.imgetapa {
-    border-style: double;
-    color: brown;
+#next_etapa {
+    margin-top: 500px;
+    margin-left: 550px;
+}
+
+#imagenp {
+    margin-top: -130px;
 }
 
 .cajatexto {
