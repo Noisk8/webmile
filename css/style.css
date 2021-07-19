@@ -10,7 +10,6 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
 }
 
 .box {
@@ -115,8 +114,9 @@ img {
 #textodescripcion {
     font-size: 15px;
     margin: auto;
-    width: 900px;
+    width: 800px;
     list-style: square;
+    margin-left: -100px;
 }
 
 #inner {
@@ -140,4 +140,27 @@ img {
 
 #foot_desc {
     margin-top: -200px;
+}
+
+html {
+    font-size: 16px;
+    @media screen and (max-width: 375px) {
+        font-size: 12px;
+    }
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 45px 20px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.paragraph {
+    font-size: 1rem;
 }
