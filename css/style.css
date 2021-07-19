@@ -114,9 +114,7 @@ img {
 #textodescripcion {
     font-size: 15px;
     margin: auto;
-    width: 800px;
     list-style: square;
-    margin-left: -100px;
 }
 
 #inner {
@@ -150,11 +148,11 @@ html {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 700px;
     width: 100%;
     padding: 45px 20px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .title {
